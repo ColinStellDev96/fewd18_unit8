@@ -305,8 +305,7 @@ body {
 
 h2 {
   text-transform: uppercase;
-  margin: 1.5625em 0;
-  margin-left: 0.3125em;
+  margin-top: 1.5625em;
   color: #2f3030; }
 
 img {
@@ -323,15 +322,26 @@ img {
   font-size: 0.875em;
   margin: 0.3125em 0; }
 
+#directory {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
 .employee-card {
   display: flex;
   flex-direction: row;
-  width: 18.75em;
-  margin: 0; }
+  width: 17.1875em;
+  margin: 1.25em 0;
+  background-color: white;
+  padding: 1.125em;
+  border: 0.0625em solid #2f3030;
+  border-radius: 0.3125em; }
 
 .employee-info {
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  margin-left: 0.625em; }
 
 /*# sourceMappingURL=style.css.map */

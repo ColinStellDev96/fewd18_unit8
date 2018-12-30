@@ -2,8 +2,7 @@
 
 h2 {
     text-transform: uppercase;
-    margin: em(25px) 0;
-    margin-left: em(5px);
+    margin-top: em(25px);
     color: $grey;
 }
 
@@ -26,12 +25,22 @@ img {
 
 // FLEX STYLING
 
+#directory {
+    @include flex(flex, row, space-between);
+    flex-wrap: wrap;
+}
+
 .employee-card {
     @include flex(flex, row);
-    width: em(300px);
-    margin: 0;
+    width: em(275px);
+    margin: em(20px) 0;
+    background-color: white;
+    padding: em(18px);
+    border: em(1px) solid $grey;
+    border-radius: em(5px);
 }
 
 .employee-info {
     @include flex(flex, column, center);
+    margin-left: em(10px);
 }
