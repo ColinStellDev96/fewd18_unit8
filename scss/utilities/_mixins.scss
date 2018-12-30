@@ -31,8 +31,3 @@
     flex-direction: $direction;
     justify-content: $justify;
 }
-
-//GRID
-@mixin grid {
-    display: grid;
-}

@@ -311,27 +311,27 @@ h2 {
 
 img {
   border-radius: 50%;
-  display: inline-block; }
+  height: 100px; }
 
-h4 {
+.name {
   font-size: 1em;
-  margin: 0.5em 0;
-  display: inline-block; }
+  margin: 0.5em 0; }
 
-p {
+.email,
+.city {
   color: #2f3030;
   font-size: 0.875em;
-  margin: 0.3125em 0;
-  display: inline-block; }
+  margin: 0.3125em 0; }
 
 .employee-card {
   display: flex;
-  display: inline-block;
-  max-width: 18.75em;
+  flex-direction: row;
+  width: 18.75em;
   margin: 0; }
 
 .employee-info {
-  display: inline-block;
-  text-align: center; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 /*# sourceMappingURL=style.css.map */

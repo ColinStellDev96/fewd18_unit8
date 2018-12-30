@@ -1,6 +1,5 @@
 // BASE STYLES
 
-
 h2 {
     text-transform: uppercase;
     margin: em(25px) 0;
@@ -10,32 +9,29 @@ h2 {
 
 img {
     border-radius: 50%;
-    display: inline-block;
+    height: 100px;
 }
 
-h4 {
+.name {
     font-size: em(16px);
     margin: em(8px) 0;
-    display: inline-block;
 }
 
-p {
+.email,
+.city {
     color: $grey;
     font-size: em(14px);
     margin: em(5px) 0;
-    display: inline-block;
 }
 
 // FLEX STYLING
 
 .employee-card {
-    @include flex;
-    display: inline-block;
-    max-width: em(300px);
+    @include flex(flex, row);
+    width: em(300px);
     margin: 0;
 }
 
 .employee-info {
-    display: inline-block;
-    text-align: center;
+    @include flex(flex, column, center);
 }
