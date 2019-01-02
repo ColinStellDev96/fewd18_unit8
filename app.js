@@ -1,18 +1,23 @@
 const directory = document.getElementById('directory');
 
-function checkStatus(response) {
-    if(response.ok) {
-      return Promise.resolve(response);
-    } else {
-      return Promise.reject(new Error(response.statusText));
-    }
-  }
-  
-  function fetchData(url) {
-    return fetch(url)
-      .then(checkStatus)
-      .then(res => res.json())
-      .catch(error => console.log('Looks Like There Was A Problem', error))
-  }
-
-  
+fetch('https://randomuser.me/api/?results=12&inc=name,location,email,phone,picture,dob')
+    .then(response => {
+        return response.json();
+    }).then(data => {
+        console.log(data);
+        const html = data.forEach(function (emp) {
+            `
+            <div class="employee-card">
+            <img src="${emp.picture.thumbnail}" alt="${emp.name.first}">
+                <div class="employee-info">
+                    <div class="name">Employee Name</div>
+                    <div class="email">Email</div>
+                    <div class="city">City</div>
+                </div>
+            </div>
+            `
+        })
+        directory.innerHTML = html;
+    }).catch(err => {
+        console.log('Looks Like There Was A Problem')
+    });
