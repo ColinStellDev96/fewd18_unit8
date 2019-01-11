@@ -5,19 +5,21 @@ fetch('https://randomuser.me/api/?results=12&inc=name,location,email,phone,pictu
         return response.json();
     }).then(data => {
         console.log(data);
-        const html = data.forEach(function (emp) {
+        data.forEach(function (employee) {
+            const html =
             `
             <div class="employee-card">
-            <img src="${emp.picture.thumbnail}" alt="${emp.name.first}">
+            <img src="${employee.results.picture.large}" alt="employee_image">
                 <div class="employee-info">
                     <div class="name">Employee Name</div>
                     <div class="email">Email</div>
                     <div class="city">City</div>
                 </div>
             </div>
-            `
+            `;
+            return directory.innerHTML = html;
         })
-        directory.innerHTML = html;
+
     }).catch(err => {
         console.log('Looks Like There Was A Problem')
     });
