@@ -32,8 +32,4 @@ fetch('https://randomuser.me/api/?results=12&inc=name,location,email,phone,pictu
             `;
             directory.innerHTML += html;
         });
-    })
-
-    modalUp.addEventListener('click', function() {
-        input.checked = true;
     });
