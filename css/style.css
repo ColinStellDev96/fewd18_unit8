@@ -313,6 +313,10 @@ img {
   border-radius: 50%;
   height: 100px; }
 
+.modal__wrap img {
+  margin-top: 2.5em;
+  height: 150px; }
+
 .name {
   font-size: 1em;
   margin: 0.5em 0;
@@ -323,6 +327,18 @@ img {
   color: #2f3030;
   font-size: 0.875em;
   margin: 0.3125em 0; }
+
+.modal__wrap .email,
+.city,
+.phone,
+.address,
+.dob {
+  color: #2f3030;
+  font-size: 0.875em;
+  margin: 0.625em 0; }
+
+hr {
+  margin: 1.875em 0; }
 
 #directory {
   display: flex;
@@ -339,7 +355,7 @@ img {
   padding: 1.125em;
   border: 0.0625em solid #2f3030;
   border-radius: 0.3125em;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   cursor: pointer; }
 
 .employee-info {
@@ -373,11 +389,14 @@ input {
 .modal__wrap {
   background: #FFF;
   opacity: 1;
-  padding: 1em 0;
+  padding: 1em 1em;
   position: relative;
   margin: 0 auto;
-  max-width: 500px;
-  width: 90%; }
+  margin-top: 1.25em;
+  max-width: 31.25em;
+  width: 85%;
+  border-radius: 0.3125em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); }
 
 input:checked ~ .modal__overlay {
   opacity: .7;
@@ -391,8 +410,8 @@ input:checked ~ .modal__overlay {
   height: 1.5em;
   line-height: 1.5;
   position: absolute;
-  right: .5em;
-  top: .5em;
+  right: 1em;
+  top: 1em;
   width: 1.5em; }
 
 /*# sourceMappingURL=style.css.map */
