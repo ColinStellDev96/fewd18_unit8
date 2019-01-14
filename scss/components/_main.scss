@@ -30,18 +30,3 @@ img {
     @include flex(flex, row, space-between);
     flex-wrap: wrap;
 }
-
-.employee-card {
-    @include flex(flex, row);
-    width: em(350px);
-    margin: em(20px) 0;
-    background-color: white;
-    padding: em(18px);
-    border: em(1px) solid $grey;
-    border-radius: em(5px);
-}
-
-.employee-info {
-    @include flex(flex, column, center);
-    margin-left: em(10px);
-}

@@ -330,7 +330,7 @@ img {
   justify-content: space-between;
   flex-wrap: wrap; }
 
-.employee-card {
+#employee-card {
   display: flex;
   flex-direction: row;
   width: 21.875em;
@@ -338,12 +338,48 @@ img {
   background-color: white;
   padding: 1.125em;
   border: 0.0625em solid #2f3030;
-  border-radius: 0.3125em; }
+  border-radius: 0.3125em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer; }
 
 .employee-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 0.625em; }
+
+.modal__overlay {
+  background: #000000;
+  opacity: .8;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  text-shadow: none;
+  top: 0;
+  z-index: 600; }
+
+.modal__wrap {
+  padding: 1em 0;
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 90%; }
+
+input {
+  position: absolute;
+  top: -1000px; }
+
+.modal__overlay {
+  opacity: 0;
+  z-index: -100;
+  transform: scale(0.5);
+  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+input:checked ~ .modal__overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 800; }
 
 /*# sourceMappingURL=style.css.map */
