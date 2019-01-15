@@ -1,4 +1,4 @@
-#employee-card {
+.employee-card {
     @include flex(flex, row);
     width: em(350px);
     margin: em(20px) 0;
@@ -17,64 +17,47 @@
 
 //MODAL STYLES
 
-.modal__overlay {
-    background: rgba(255, 255, 255, .8);
-    opacity: .8;
-    bottom: 0;
-    left: 0;
+.modal {
     position: fixed;
-    right: 0;
-    text-align: center;
-    text-shadow: none;
+    left: 0;
     top: 0;
-    z-index: 600;
-}
-
-input {
-    position: absolute;
-    top: -1000px;
-}
-
-.modal__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
-    z-index: -100;
-    transform: scale(0.5);
-    transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.modal__wrap {
-    background: #FFF;
-    opacity: 1;
-    padding: 1em 1em;
-    position: relative;
-    margin: 0 auto;
-    margin-top: em(20px);
-    max-width: em(500px);
-    width: 85%;
-    border-radius: em(5px);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-}
-
-input:checked~.modal__overlay {
-    opacity: .7;
-    transform: scale(1);
-    z-index: 800;
-}
-
-input:checked~.modal__wrap {
-    z-index: 1100;
-    opacity: 1;
-}
-
-.modal__wrap label {
-    color: #000000;
-    cursor: pointer;
-    display: inline-block;
-    height: 1.5em;
-    line-height: 1.5;
+.modal-content {
     position: absolute;
-    right: 1em;
-    top: 1em;
-    width: 1.5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: em(10px);
+    width: em(450px);
+    border-radius: em(5px);
+}
+
+.close-modal {
+    position: absolute;
+    top: em(10px);
+    right: em(10px);
+    width: em(16px);
+    line-height: em(5px);
+    text-align: center;
+    cursor: pointer;
+}
+
+.close-modal {
+    background-color: $grey;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }

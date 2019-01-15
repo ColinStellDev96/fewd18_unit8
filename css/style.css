@@ -346,7 +346,7 @@ hr {
   justify-content: space-between;
   flex-wrap: wrap; }
 
-#employee-card {
+.employee-card {
   display: flex;
   flex-direction: row;
   width: 21.875em;
@@ -364,59 +364,44 @@ hr {
   justify-content: center;
   margin-left: 0.625em; }
 
-.modal__overlay {
-  background: rgba(255, 255, 255, 0.8);
-  opacity: .8;
-  bottom: 0;
-  left: 0;
+.modal {
   position: fixed;
-  right: 0;
-  text-align: center;
-  text-shadow: none;
+  left: 0;
   top: 0;
-  z-index: 600; }
-
-input {
-  position: absolute;
-  top: -1000px; }
-
-.modal__overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  z-index: -100;
-  transform: scale(0.5);
-  transition: all 0.75s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; }
 
-.modal__wrap {
-  background: #FFF;
-  opacity: 1;
-  padding: 1em 1em;
-  position: relative;
-  margin: 0 auto;
-  margin-top: 1.25em;
-  max-width: 31.25em;
-  width: 85%;
-  border-radius: 0.3125em;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-  z-index: 1000; }
-
-input:checked ~ .modal__overlay {
-  opacity: .7;
-  transform: scale(1);
-  z-index: 800; }
-
-input:checked ~ .modal__wrap {
-  z-index: 1100;
-  opacity: 1; }
-
-.modal__wrap label {
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  height: 1.5em;
-  line-height: 1.5;
+.modal-content {
   position: absolute;
-  right: 1em;
-  top: 1em;
-  width: 1.5em; }
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0.625em;
+  width: 28.125em;
+  border-radius: 0.3125em; }
+
+.close-modal {
+  position: absolute;
+  top: 0.625em;
+  right: 0.625em;
+  width: 1em;
+  line-height: 0.3125em;
+  text-align: center;
+  cursor: pointer; }
+
+.close-modal {
+  background-color: #2f3030; }
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; }
 
 /*# sourceMappingURL=style.css.map */
