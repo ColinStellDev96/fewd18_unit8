@@ -1,5 +1,5 @@
 const directory = document.getElementById('directory');
-const modalUp = document.getElementsByClassName('employee-card')[0];
+const employeeCard = document.getElementsByClassName('employee-card')[0];
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.close-modal');
 
@@ -36,9 +36,29 @@ fetch('https://randomuser.me/api/?results=12&inc=name,location,email,phone,pictu
             `;
             directory.append(card);
         });
+
+        const modalContent = document.createElement('div');
+        modalContent.className = 'modal-content';
+        modal.append(modalContent);
+
+
+        `
+        <div class="modal-content">
+            <span class="close-modal">&#10006;</span>
+            <img src="https://via.placeholder.com/150" alt="employee_image">
+            <div class="name">First Last</div>
+            <div class="email">email</div>
+            <div class="city">city</div>
+            <hr>
+            <div class="phone">phone</div>
+            <div class="address">adress</div>
+            <div class="dob">Birthday: 00/00/0000</div>
+        </div>
+        `
+
     }); // END FETCH DATA
 
-modalUp.addEventListener('click', function () {
+employeeCard.addEventListener('click', function () {
     modal.classList.add('show-modal');
 });
 
