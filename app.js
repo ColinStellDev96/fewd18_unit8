@@ -1,7 +1,11 @@
 const directory = document.getElementById("directory");
-const employeeCard = document.getElementsByClassName("employee-card")[0];
 const modal = document.querySelector(".modal");
+const employeeCard = document.getElementsByClassName("employee-card")[0];
 const closeModal = document.querySelector(".close-modal");
+
+const modalContent = document.createElement("div");
+modalContent.className = "modal-content";
+
 
 fetch(
   "https://randomuser.me/api/?results=12&inc=name,location,email,phone,picture,dob"
@@ -49,11 +53,8 @@ fetch(
             </div>
             `;
       directory.append(card);
-    });
-    const modalContent = document.createElement("div");
-        modalContent.className = "modal-content";
-        modalContent.innerHTML = `
-            <div class="modal-content">
+
+      modalContent.innerHTML = `
                 <span class="close-modal">&#10006;</span>
                 <img src="${photo}" alt="employee_image">
                 <div class="name">${name}</div>
@@ -63,17 +64,16 @@ fetch(
                 <div class="phone">${phone}</div>
                 <div class="address">${address}</div>
                 <div class="dob">Birthday: ${birthday}</div>
-            </div>
             `;
-        modal.append(modalContent);
-  
-    employeeCard.addEventListener("click", function() {
-        modal.classList.add("show-modal");
-      });
-      
-      closeModal.addEventListener("click", function() {
-        modal.classList.remove("show-modal");
-      });
+      modal.append(modalContent);
+    });
   }); // END FETCH DATA
 
+  employeeCard.addEventListener("click", function() {
+    console.log("click");
+    modal.classList.add("show-modal");
+  });
 
+  closeModal.addEventListener("click", function() {
+    modal.classList.remove("show-modal");
+  });
