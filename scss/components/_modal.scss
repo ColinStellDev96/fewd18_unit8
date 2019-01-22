@@ -7,11 +7,7 @@
     border: em(1px) solid $grey;
     border-radius: em(5px);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-    
-    & :hover {
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    }
+    cursor: pointer; 
 }
 
 .employee-info {
@@ -53,10 +49,6 @@
     line-height: em(5px);
     text-align: center;
     cursor: pointer;
-}
-
-.close-modal {
-    background-color: $grey;
 }
 
 .show-modal {

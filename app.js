@@ -1,22 +1,21 @@
 const directory = document.getElementById("directory");
 const modal = document.querySelector(".modal");
-const employeeCard = document.getElementsByClassName("employee-card")[0];
-const closeModal = document.querySelector(".close-modal");
+let employeeCard;
+let closeModal;
 
+// Create Modal Content Div
 const modalContent = document.createElement("div");
 modalContent.className = "modal-content";
-
 
 fetch(
   "https://randomuser.me/api/?results=12&inc=name,location,email,phone,picture,dob"
 )
-  .then(response => {
-    return response.json();
-  })
   .catch(err => {
     console.log("Error-No Data For You");
   })
-
+  .then(response => {
+    return response.json();
+  })
   .then(data => {
     console.log(data);
     data.results.forEach(function(employee, i) {
@@ -67,13 +66,25 @@ fetch(
             `;
       modal.append(modalContent);
     });
+
+    employeeCard = document.getElementsByClassName("employee-card");
+    closeModal = document.querySelector(".close-modal");
+    console.log(employeeCard);
+
+    for (var i = 0; i < employeeCard.length; i++) {
+      employeeCard[i].addEventListener("click", function() {
+        console.log("click");
+        modal.classList.add("show-modal");
+      });
+    }
+
+    // employeeCard.forEach(function(emp) {
+    //   emp.addEventListener("click", function() {
+    //     modal.classList.add("show-modal");
+    //   });
+    // });
+
+    closeModal.addEventListener("click", function() {
+      modal.classList.remove("show-modal");
+    });
   }); // END FETCH DATA
-
-  employeeCard.addEventListener("click", function() {
-    console.log("click");
-    modal.classList.add("show-modal");
-  });
-
-  closeModal.addEventListener("click", function() {
-    modal.classList.remove("show-modal");
-  });

@@ -395,9 +395,6 @@ hr {
   text-align: center;
   cursor: pointer; }
 
-.close-modal {
-  background-color: #2f3030; }
-
 .show-modal {
   opacity: 1;
   visibility: visible;
