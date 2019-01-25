@@ -39,7 +39,7 @@ fetch(
         caps(employee.location.state) +
         " " +
         employee.location.postcode;
-      const birthday = employee.dob;
+      const birthday = employee.dob.date;
 
       const card = document.createElement("div");
       card.className = "employee-card";
@@ -77,12 +77,6 @@ fetch(
         modal.classList.add("show-modal");
       });
     }
-
-    // employeeCard.forEach(function(emp) {
-    //   emp.addEventListener("click", function() {
-    //     modal.classList.add("show-modal");
-    //   });
-    // });
 
     closeModal.addEventListener("click", function() {
       modal.classList.remove("show-modal");
