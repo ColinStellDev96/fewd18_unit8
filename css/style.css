@@ -346,6 +346,9 @@ hr {
   justify-content: space-between;
   flex-wrap: wrap; }
 
+.modal-content {
+  text-align: center; }
+
 .employee-card {
   display: flex;
   flex-direction: row;

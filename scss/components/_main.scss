@@ -49,3 +49,9 @@ hr {
     @include flex(flex, row, space-between);
     flex-wrap: wrap;
 }
+
+// MODAL STYLING
+
+.modal-content {
+    text-align: center;
+}
