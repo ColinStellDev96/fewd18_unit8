@@ -366,6 +366,7 @@ h2 {
   text-transform: uppercase;
   margin-top: 0.9375em;
   color: #2f3030;
+  text-align: center;
 }
 
 img {
@@ -418,8 +419,12 @@ hr {
   padding: 1.125em;
   border: 0.0625em solid #2f3030;
   border-radius: 0.3125em;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   cursor: pointer;
+  transition: border 0.2s linear;
+}
+.employee-card:hover {
+  border: 0.1875em solid #2f3030;
 }
 
 .employee-info {

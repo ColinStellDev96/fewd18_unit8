@@ -6,8 +6,12 @@
     padding: em(18px);
     border: em(1px) solid $grey;
     border-radius: em(5px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    cursor: pointer; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: border 0.2s linear;
+    &:hover {
+        border: em(3px) solid $grey;
+    }
 }
 
 .employee-info {
