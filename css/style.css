@@ -304,6 +304,19 @@ body {
   font-family: "Lato", sans-serif;
   padding: 0.625em; }
 
+.container {
+  margin: 0 auto;
+  max-width: 1424px; }
+
+#directory {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "card" "card" "card" "card" "card" "card" "card" "card" "card" "card" "card" "card"; }
+  @media (min-width: 768px) {
+    #directory {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "card card card" "card card card" "card card card" "card card card"; } }
+
 h2 {
   text-transform: uppercase;
   margin-top: 0.9375em;
@@ -340,12 +353,6 @@ img {
 hr {
   margin: 1.875em 0; }
 
-#directory {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap; }
-
 .modal-content {
   text-align: center; }
 
@@ -365,7 +372,8 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 0.625em; }
+  margin-left: 0.625em;
+  grid-area: card; }
 
 .modal {
   position: fixed;

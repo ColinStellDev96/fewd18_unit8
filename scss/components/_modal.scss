@@ -13,6 +13,7 @@
 .employee-info {
     @include flex(flex, column, center);
     margin-left: em(10px);
+    grid-area: card;
 }
 
 //MODAL STYLES

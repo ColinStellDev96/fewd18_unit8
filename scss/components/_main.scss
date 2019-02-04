@@ -1,3 +1,52 @@
+.container {
+    margin: 0 auto;
+    max-width: 1424px;
+}
+
+// GRIS STYLING
+
+#directory {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+    ;
+
+    @include mq(medium) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card card"
+            "card card"
+            "card card"
+            "card card"
+            "card card"
+            "card card"
+        ;
+    }
+
+    @include mq(large) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card card card"
+            "card card card"
+            "card card card"
+            "card card card"
+        ;
+    }
+
+}
+
 // BASE STYLES
 
 h2 {
@@ -41,13 +90,6 @@ img {
 
 hr {
     margin: em(30px) 0;
-}
-
-// FLEX STYLING
-
-#directory {
-    @include flex(flex, row, space-between);
-    flex-wrap: wrap;
 }
 
 // MODAL STYLING
