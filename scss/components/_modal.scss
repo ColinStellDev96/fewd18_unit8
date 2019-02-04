@@ -1,7 +1,7 @@
 .employee-card {
     @include flex(flex, row);
     width: em(350px);
-    margin: em(20px) 0;
+    margin: 0 auto;
     background-color: white;
     padding: em(18px);
     border: em(1px) solid $grey;

@@ -82,7 +82,9 @@ const modalInfo = (employees, employee, index) => {
       caps(employee.location.state) +
       " " +
       employee.location.postcode;
-    let birthday = employee.dob.date;
+    let birthday = new Date(Date.parse(employee.dob.date)).toLocaleDateString(navigator.language);
+
+    
 
   let modalInternal = `
       <span class="close-modal">&#10006;</span>
